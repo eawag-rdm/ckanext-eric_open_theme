@@ -3,6 +3,7 @@ ckanext-eaw_theme
 =============
 
 * provides Eawag logo
+* provides Eawag favicon
 * provides spatial search display
  
 ------------
