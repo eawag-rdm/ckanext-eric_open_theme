@@ -1,5 +1,5 @@
 import ckan.plugins as plugins
-import ckan.plugins.toolkit as toolkit
+import ckan.plugins.toolkit as tk
 
 
 class Eaw_ThemePlugin(plugins.SingletonPlugin):
@@ -8,6 +8,8 @@ class Eaw_ThemePlugin(plugins.SingletonPlugin):
     # IConfigurer
 
     def update_config(self, config_):
-        toolkit.add_template_directory(config_, 'templates')
-        toolkit.add_public_directory(config_, 'public')
-        #toolkit.add_resource('fanstatic', 'eaw_theme')
+        tk.add_template_directory(config_, 'templates')
+        tk.add_public_directory(config_, 'public')
+        tk.add_resource('fanstatic/vendor/bootstrap-switch', 'bootstrap-switch')
+        tk.add_resource('fanstatic', 'eaw_theme')
+
