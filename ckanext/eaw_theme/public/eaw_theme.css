@@ -13,16 +13,20 @@
     float: right;
 }
 
-.search-form .clear-form-button {
+.clear-form-button {
     float:right;
 }
 
-.andorcheck label {
-    display: inline;
+.select2-container-multi .select2-choices {
+    min-height: 8em;
 }
-.andorcheck label::after {
-    content: ''
-}
+
+/* .andorcheck label { */
+/*     display: inline; */
+/* } */
+/* .andorcheck label::after { */
+/*     content: '' */
+/* } */
 
 /* .andorcheck input { */
 /*     /\* width: 13px; *\/ */
