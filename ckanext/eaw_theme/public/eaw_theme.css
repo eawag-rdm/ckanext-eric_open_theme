@@ -21,6 +21,10 @@
     min-height: 8em;
 }
 
+.control-order-by {
+    float:right;
+}
+
 /* .andorcheck label { */
 /*     display: inline; */
 /* } */
