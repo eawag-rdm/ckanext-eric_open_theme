@@ -3,8 +3,14 @@
 ckan.module('andorswitch', function ($, _) {
   return {
       initialize: function () {
-	  this.el.bootstrapSwitch('onText', 'ANY');
-	  this.el.bootstrapSwitch('offText', 'ALL');
+	  var options = {
+	      onText: "ANY",
+	      onColor: "primary",
+	      offText: "ALL",
+	      offColor: "info",
+	      animate: false,
+	  };
+	  this.el.bootstrapSwitch(options);
     }
   };
 });

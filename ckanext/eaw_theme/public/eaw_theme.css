@@ -13,17 +13,26 @@
     float: right;
 }
 
-.clear-form-button {
-    float:right;
-}
+/* .clear-form-button { */
+/*     float:right; */
+/* } */
 
 .select2-container-multi .select2-choices {
-    min-height: 8em;
+    min-height: 53px;
 }
 
-.control-order-by {
-    float:right;
+.h4searchlabel {
+    margin-bottom: 0px;
 }
+
+select.filterselect {
+    height:60px;
+    overflow:auto;
+}
+
+/* .control-order-by { */
+/*     float:left; */
+/* } */
 
 /* .andorcheck label { */
 /*     display: inline; */
