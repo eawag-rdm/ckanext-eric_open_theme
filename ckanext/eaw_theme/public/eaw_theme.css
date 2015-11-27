@@ -30,6 +30,10 @@ select.filterselect {
     overflow:auto;
 }
 
+.presearchboxtext {
+    margin:5px;
+}
+
 /* .control-order-by { */
 /*     float:left; */
 /* } */
