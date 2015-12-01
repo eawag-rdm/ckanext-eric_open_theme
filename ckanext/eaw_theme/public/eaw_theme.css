@@ -13,10 +13,6 @@
     float: right;
 }
 
-/* .clear-form-button { */
-/*     float:right; */
-/* } */
-
 .select2-container-multi .select2-choices {
     min-height: 53px;
 }
@@ -36,28 +32,10 @@ select.filterselect {
 
 .form-inline .advsearchbutton {
     margin:0px;
+    display:none;
+ 
 }
 
-
-/* .control-order-by { */
-/*     float:left; */
-/* } */
-
-/* .andorcheck label { */
-/*     display: inline; */
-/* } */
-/* .andorcheck label::after { */
-/*     content: '' */
-/* } */
-
-/* .andorcheck input { */
-/*     /\* width: 13px; *\/ */
-/*     /\* height: 13px; *\/ */
-/*     /\* padding: 0; *\/ */
-/*     /\* margin:0; *\/ */
-/*     vertical-align: bottom; */
-/*     position: relative; */
-/*     top: -3px; */
-/*     margin-left:0.5ex; */
-/*     *overflow: hidden; */
-/* } */
+.form-inline .advsearchbutton > li {
+    background-color: #eaeaea;
+}
