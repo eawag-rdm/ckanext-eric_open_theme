@@ -9,7 +9,7 @@
     font-size: 18px;
 }
 
-.page_primary_action {
+.page_primary_action > a.btn-primary{
     float: right;
 }
 
