@@ -34,6 +34,11 @@ select.filterselect {
     margin:5px;
 }
 
+.form-inline .advsearchbutton {
+    margin:0px;
+}
+
+
 /* .control-order-by { */
 /*     float:left; */
 /* } */
