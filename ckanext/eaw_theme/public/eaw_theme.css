@@ -39,3 +39,13 @@ select.filterselect {
 .form-inline .advsearchbutton > li {
     background-color: #eaeaea;
 }
+
+.search-form .search-input button.outsidebutton  {
+    right: -25px;
+}
+
+
+.search-form .search-input .outsidebutton i {
+    color: #000000;
+    font-size: 120%;
+}
