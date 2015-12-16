@@ -8,12 +8,14 @@
 ckan.module('eaw_theme_hidewithjs', function($, _) {
     return {
 	initialize: function () {
-	    var _this = this.el;
+	    // var _this = this.el;
+	    var target = this.options.target;
+	    var hidden = this.sandbox.jQuery( target );
 	    this.el.show();
-	    this.el.next().hide();
-	    this.el.next().find( 'h4' ).hide();
+	    hidden.hide();
+	    hidden.find( 'h4' ).hide();
 	    this.el.click(function () {
-		_this.next().toggle();
+		hidden.toggle();
 		return(false);
 	    });
 	}

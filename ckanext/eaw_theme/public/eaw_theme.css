@@ -27,7 +27,8 @@ select.filterselect {
 }
 
 .presearchboxtext {
-    margin:5px;
+    margin: 5px;
+    width: 50%;
 }
 
 .form-inline .advsearchbutton {
@@ -44,8 +45,42 @@ select.filterselect {
     right: -25px;
 }
 
+.search-form .search-input button.outsidebutton.second  {
+    right: -50px;
+}
+
 
 .search-form .search-input .outsidebutton i {
     color: #000000;
     font-size: 120%;
+}
+
+.modal-body table {
+    table-layout:fixed;
+    /* border: 1px solid black; */
+    /* border-collapse: collapse; */
+}
+
+.modal-body span {
+    font-weight: bold;
+}
+
+.modal-body table th.col1 {
+    width: 23ex;
+}
+
+.modal-body table th.col2 {
+    width: 23ex;
+}
+
+.modal-body table th.col3 {
+    width: 30ex;
+}
+
+.modal-body table tr {
+    border-bottom: solid black 1px;
+}
+
+.modal-body table th {
+    text-align: left;
 }
