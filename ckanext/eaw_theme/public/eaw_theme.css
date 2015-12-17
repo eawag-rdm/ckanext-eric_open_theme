@@ -87,3 +87,11 @@ select.filterselect {
 .modal-body table th {
     text-align: left;
 }
+
+.dataset-heading .badge {
+    float:right;
+}
+
+.badge > a, .label > a {
+    color: #ffffff;
+}
