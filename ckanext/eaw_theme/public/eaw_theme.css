@@ -28,13 +28,17 @@ select.filterselect {
 
 .presearchboxtext {
     margin: 5px;
-    width: 50%;
+    width: 355px;
 }
 
 .form-inline .advsearchbutton {
     margin:0px;
     display:none;
  
+}
+
+.clear-filter-group {
+    float: right;
 }
 
 .form-inline .advsearchbutton > li {
@@ -48,7 +52,6 @@ select.filterselect {
 .search-form .search-input button.outsidebutton.second  {
     right: -50px;
 }
-
 
 .search-form .search-input .outsidebutton i {
     color: #000000;
