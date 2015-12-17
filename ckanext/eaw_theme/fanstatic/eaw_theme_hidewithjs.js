@@ -8,11 +8,14 @@
 ckan.module('eaw_theme_hidewithjs', function($, _) {
     return {
 	initialize: function () {
-	    // var _this = this.el;
 	    var target = this.options.target;
 	    var hidden = this.sandbox.jQuery( target );
+	    var query = this.options.query;
 	    this.el.show();
-	    hidden.hide();
+	    if (typeof query !== "string")
+		hidden.hide();
+	    else
+		hidden.show();
 	    hidden.find( 'h4' ).hide();
 	    this.el.click(function () {
 		hidden.toggle();
