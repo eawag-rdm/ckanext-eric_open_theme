@@ -95,3 +95,7 @@ select.filterselect {
 .badge > a, .label > a {
     color: #ffffff;
 }
+
+a.package_desc {
+    color: #000000;
+}
