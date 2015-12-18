@@ -104,3 +104,7 @@ a.package_desc {
 .search-form .search-input.search-giant button {
     margin-top: -5px;
 }
+
+form.module-content.search-form .search-input.search-giant button {
+    margin-top: -15px;
+}
