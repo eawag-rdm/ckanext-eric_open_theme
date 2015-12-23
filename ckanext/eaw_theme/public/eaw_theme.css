@@ -13,6 +13,12 @@ a.logo img {
     max-width: 262px;
 }
 
+@media (min-width: 768px) {
+    .hero {
+	background: url("../../../base/images/cern_server-room4.jpg");
+    }
+}
+
 .page_primary_action > a.btn-primary{
     float: right;
     margin-bottom: 10px;
