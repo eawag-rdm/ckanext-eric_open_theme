@@ -1,3 +1,25 @@
+/* FOUC prevention ************/
+
+.js option.fouc {
+    display: none;
+}
+.js label.fouc {
+    display: none;
+}
+.js input.fouc {
+    display: none;
+}
+.js button.fouc {
+    display: none;
+}
+.js .presearchboxtext.fouc {
+    display:none;
+}
+.js #advancedsearch.fouc {
+    display:none;
+}
+/******************************/
+
 .masthead .nav > li > a,
 .masthead .nav > li > a:focus,
 .masthead .nav > li > a:hover,
@@ -48,12 +70,20 @@ select.filterselect {
  
 }
 
+.js .form-inline .advsearchbutton {
+    display:block;
+}
+
 .clear-filter-group {
     float: right;
 }
 
 .form-inline .advsearchbutton > li {
     background-color: #eaeaea;
+}
+
+.search-form input.wide-search {
+    width: 355px;
 }
 
 .search-form .search-input button.outsidebutton  {
