@@ -12,12 +12,11 @@
 .js-on button.fouc {
     display: none;
 }
-.js-on .presearchboxtext.fouc {
-    display:none;
-}
 .js-on #advancedsearch.fouc {
-    display:none;
+    /* display:none; */
+    visibility: hidden;
 }
+
 /******************************/
 
 .masthead .nav > li > a,
@@ -64,20 +63,11 @@ select.filterselect {
     width: 355px;
 }
 
-.form-inline .advsearchbutton {
-    margin:0px;
-    visibility:hidden;
- 
-}
-
-.js-on .form-inline .advsearchbutton {
-    visibility:visible;
-}
-
 .clear-filter-group {
     float: right;
 }
 
+/* Advaced search section *************************/
 .form-inline .advsearchbutton > li {
     background-color: #eaeaea;
 }
@@ -86,6 +76,13 @@ select.filterselect {
     width: 355px;
 }
 
+.search-form #advancedsearch div.search-input {
+    float:left;
+    margin-right:5px;
+}
+/***************************************************/
+
+/* Time- and vocabulary search input ***************/
 .search-form .search-input button.outsidebutton  {
     right: -25px;
 }
@@ -98,11 +95,10 @@ select.filterselect {
     color: #000000;
     font-size: 120%;
 }
+/***************************************************/
 
 .modal-body table {
     table-layout:fixed;
-    /* border: 1px solid black; */
-    /* border-collapse: collapse; */
 }
 
 .modal-body span {

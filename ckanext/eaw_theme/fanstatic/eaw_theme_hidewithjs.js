@@ -12,14 +12,17 @@ ckan.module('eaw_theme_hidewithjs', function($, _) {
 	    var hidden = this.sandbox.jQuery( target );
 	    var query = this.options.query;
 	    this.el.show();
-	    if (typeof query !== "string")
-		hidden.hide();
-	    else
-		hidden.show();
-	    hidden.find( 'h4' ).hide();
-	    this.el.click(function () {
-		hidden.toggle();
-		return(false);
+	  if (typeof query !== "string") {
+	      hidden.css('visibility', 'hidden');
+	    } else { 
+	      hidden.css('visibility', 'visible');
+	    }
+	  this.el.click(function () {
+	    var viz;
+	    viz = hidden.css('visibility') === 'hidden' ? 'visible' : 'hidden';
+	    console.log(viz);
+	    hidden.css('visibility', viz);
+	    return(false);
 	    });
 	}
     };
