@@ -1,6 +1,8 @@
 {% ckan_extends %}
 
 {% block styles %}
+{# this is usd to prevent FOUC (flash on unstyled content) #}
+<script>document.documentElement.className += 'js-on';</script>
   {{ super() }}
   <link rel="stylesheet" href="/eaw_theme.css" />
 {% endblock %}

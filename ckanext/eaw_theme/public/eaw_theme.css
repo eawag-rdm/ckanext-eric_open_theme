@@ -1,21 +1,21 @@
 /* FOUC prevention ************/
 
-.js option.fouc {
+.js-on option.fouc {
     display: none;
 }
-.js label.fouc {
+.js-on label.fouc {
     display: none;
 }
-.js input.fouc {
+.js-on input.fouc {
     display: none;
 }
-.js button.fouc {
+.js-on button.fouc {
     display: none;
 }
-.js .presearchboxtext.fouc {
+.js-on .presearchboxtext.fouc {
     display:none;
 }
-.js #advancedsearch.fouc {
+.js-on #advancedsearch.fouc {
     display:none;
 }
 /******************************/
@@ -66,12 +66,12 @@ select.filterselect {
 
 .form-inline .advsearchbutton {
     margin:0px;
-    display:none;
+    visibility:hidden;
  
 }
 
-.js .form-inline .advsearchbutton {
-    display:block;
+.js-on .form-inline .advsearchbutton {
+    visibility:visible;
 }
 
 .clear-filter-group {
