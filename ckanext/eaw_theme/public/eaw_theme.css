@@ -97,6 +97,20 @@ select.filterselect {
 }
 /***************************************************/
 
+div.time-search {
+    float:left;
+    margin-right:5px;
+}
+
+.time-search.error {
+    color: #b55457;
+}
+
+.time-search.error input{
+    border-color: #b55457;
+    border-width: medium;
+}
+
 .modal-body table {
     table-layout:fixed;
 }
