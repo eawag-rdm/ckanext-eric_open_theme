@@ -821,11 +821,11 @@ msgstr ""
 
 #: ckan/lib/activity_streams.py:114
 msgid "{actor} created the dataset {dataset}"
-msgstr ""
+msgstr "{actor} created the package {dataset}"
 
 #: ckan/lib/activity_streams.py:117
 msgid "{actor} added the extra {extra} to the dataset {dataset}"
-msgstr ""
+msgstr "{actor} added the extra {extra} to the package {dataset}"
 
 #: ckan/lib/activity_streams.py:120
 msgid "{actor} added the resource {resource} to the dataset {dataset}"
@@ -1564,7 +1564,7 @@ msgstr ""
 
 #: ckan/logic/auth/create.py:77
 msgid "No dataset id provided, cannot check auth."
-msgstr msgid "No package id provided, cannot check auth."
+msgstr "No package id provided, cannot check auth."
 
 #: ckan/logic/auth/create.py:84 ckan/logic/auth/delete.py:32
 #: ckan/logic/auth/get.py:135 ckan/logic/auth/update.py:61
@@ -3132,7 +3132,10 @@ msgid ""
 " A CKAN Dataset is a collection of data resources (such as files), together "
 "with a description and other information, at a fixed URL. Datasets are what "
 "users see when searching for data. "
-msgstr " A CKAN Package is a collection of data resources (such as files), together with a description and other information, at a fixed URL. Packages are what users see when searching for data. "
+msgstr ""
+msgstr " A CKAN Package is a collection of data resources (such as files), together "
+"with a description and other information, at a fixed URL. Packages are what "
+"users see when searching for data. "
 
 #: ckan/templates/package/confirm_delete.html:11
 msgid "Are you sure you want to delete dataset - {name}?"
@@ -3170,7 +3173,7 @@ msgstr ""
 
 #: ckan/templates/package/group_list.html:14
 msgid "Associate this group with this dataset"
-msgstr "Associate this group with this apckage"
+msgstr "Associate this group with this package"
 
 #: ckan/templates/package/group_list.html:14
 msgid "Add to group"
@@ -3554,10 +3557,16 @@ msgid ""
 "href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open Database "
 "License</a>."
 msgstr ""
+"The <i>data license</i> you select above only applies to the contents of "
+"any resource files that you add to this package. By submitting this form,"
+" you agree to release the <i>metadata</i> values that you enter into the "
+"form under the <a "
+"href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open Database "
+"License</a>."
 
 #: ckan/templates/package/snippets/package_form.html:39
 msgid "Are you sure you want to delete this dataset?"
-msgstr ""
+msgstr "Are you sure you want to delete this package?"
 
 #: ckan/templates/package/snippets/package_form.html:44
 msgid "Next: Add Data"
@@ -3709,17 +3718,17 @@ msgstr ""
 
 #: ckan/templates/package/snippets/resources_list.html:29
 msgid "This dataset has no data"
-msgstr ""
+msgstr "This package has no data"
 
 #: ckan/templates/package/snippets/revisions_table.html:24
 #, python-format
 msgid "Read dataset as of %s"
-msgstr ""
+msgstr "Read package as of %s"
 
 #: ckan/templates/package/snippets/stages.html:23
 #: ckan/templates/package/snippets/stages.html:25
 msgid "Create dataset"
-msgstr ""
+msgstr "Create package"
 
 #: ckan/templates/package/snippets/stages.html:30
 #: ckan/templates/package/snippets/stages.html:34
@@ -3862,7 +3871,7 @@ msgstr ""
 
 #: ckan/templates/snippets/license.html:28
 msgid "This dataset satisfies the Open Definition."
-msgstr ""
+msgstr "This package satisfies the Open Definition."
 
 #: ckan/templates/snippets/organization.html:48
 msgid "There is no description for this organization"
@@ -3870,13 +3879,14 @@ msgstr ""
 
 #: ckan/templates/snippets/package_item.html:57
 msgid "This dataset has no description"
-msgstr ""
+msgstr "This package has no description"
 
 #: ckan/templates/snippets/related.html:15
 msgid ""
 "No apps, ideas, news stories or images have been related to this dataset "
 "yet."
 msgstr ""
+"No apps, ideas, news stories or images have been related to this package "
 
 #: ckan/templates/snippets/related.html:18
 msgid "Add Item"
@@ -3909,22 +3919,22 @@ msgstr ""
 #: ckan/templates/snippets/search_result_text.html:15
 msgid "{number} dataset found for \"{query}\""
 msgid_plural "{number} datasets found for \"{query}\""
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{number} package found for \"{query}\""
+msgstr[1] "{number} packages found for \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:16
 msgid "No datasets found for \"{query}\""
-msgstr ""
+msgstr "No packages found for \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:17
 msgid "{number} dataset found"
 msgid_plural "{number} datasets found"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{number} package found"
+msgstr[1] "{number} packages found"
 
 #: ckan/templates/snippets/search_result_text.html:18
 msgid "No datasets found"
-msgstr ""
+msgstr "No packages found"
 
 #: ckan/templates/snippets/search_result_text.html:21
 msgid "{number} group found for \"{query}\""
@@ -4020,7 +4030,7 @@ msgstr ""
 #: ckan/templates/user/dashboard_datasets.html:17
 #: ckan/templates/user/read.html:14
 msgid "You haven't created any datasets."
-msgstr ""
+msgstr "You haven't created any packages."
 
 #: ckan/templates/user/dashboard_datasets.html:19
 #: ckan/templates/user/dashboard_groups.html:22
@@ -4192,7 +4202,7 @@ msgstr ""
 
 #: ckan/templates/user/new.html:28
 msgid "Create datasets, groups and other exciting things"
-msgstr ""
+msgstr "Create packages, groups and other exciting things"
 
 #: ckan/templates/user/new_user_form.html:5
 msgid "username"
@@ -4230,7 +4240,7 @@ msgstr ""
 
 #: ckan/templates/user/read.html:21
 msgid "User hasn't created any datasets."
-msgstr ""
+msgstr "User hasn't created any packages."
 
 #: ckan/templates/user/read_base.html:39
 msgid "You have not provided a biography."
@@ -4469,7 +4479,7 @@ msgstr ""
 
 #: ckanext/stats/templates/ckanext/stats/index.html:18
 msgid "Total datasets"
-msgstr ""
+msgstr "Total packages"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:33
 #: ckanext/stats/templates/ckanext/stats/index.html:179
@@ -4478,11 +4488,11 @@ msgstr "Package Revisions per Week"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:41
 msgid "All dataset revisions"
-msgstr ""
+msgstr "All package revisions"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:42
 msgid "New datasets"
-msgstr ""
+msgstr "New packages"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:58
 #: ckanext/stats/templates/ckanext/stats/index.html:180
@@ -4512,7 +4522,7 @@ msgstr ""
 
 #: ckanext/stats/templates/ckanext/stats/index.html:103
 msgid "No edited datasets"
-msgstr ""
+msgstr "No edited packages"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:108
 #: ckanext/stats/templates/ckanext/stats/index.html:182
@@ -4521,7 +4531,7 @@ msgstr ""
 
 #: ckanext/stats/templates/ckanext/stats/index.html:114
 msgid "Number of datasets"
-msgstr ""
+msgstr "Number of packages"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:127
 msgid "No groups"
@@ -4575,3 +4585,6 @@ msgstr ""
 msgid "eg. http://example.com (if blank uses resource url)"
 msgstr ""
 
+#: ckanext/eaw_vocabularies/templates/snippets/eaw_pkg_search_form.html:12
+msgid "Filter Datasets"
+msgstr "Filter Packages"
