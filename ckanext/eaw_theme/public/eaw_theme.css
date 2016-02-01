@@ -158,3 +158,22 @@ a.package_desc {
 form.module-content.search-form .search-input.search-giant button {
     margin-top: -15px;
 }
+
+input.shortinput {
+    width: 206px;
+}
+select.shortinput {
+    width: 220px;
+}
+
+div.info-block.info-inline.shorthelp {
+    width: 240px;
+    color: black;
+    margin-top: -8px;
+}
+
+.form-horizontal .control-medium div.info-block.info-inline {
+    width: 240px;
+    color: black;
+    margin-top: -8px;
+}
