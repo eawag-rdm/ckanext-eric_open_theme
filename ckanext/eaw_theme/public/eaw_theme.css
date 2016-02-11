@@ -162,8 +162,24 @@ form.module-content.search-form .search-input.search-giant button {
 input.shortinput {
     width: 206px;
 }
+
+input.medinput {
+    width: 270px;
+}
+.control-medium .medinput ~ .error-block {
+    width: 268px;
+}
+
+.control-medium .select2-container-multi ~ .error-block {
+    width: 294px;
+}
+
 select.shortinput {
     width: 220px;
+}
+
+select.medinput {
+    width: 270px;
 }
 
 div.info-block.info-inline.shorthelp {
@@ -186,4 +202,8 @@ div.info-block.info-inline.shorthelp {
 #dataset-edit button.outsidebutton {
     background:transparent;
     border: none;
+}
+
+#dataset-edit .select2-container-multi.select2-container .select2-choices {
+    width: 320px;
 }
