@@ -40,6 +40,10 @@ a.logo img {
     }
 }
 
+div#content.container {
+    min-width: 535px;
+}
+
 .page_primary_action > a.btn-primary{
     float: right;
     margin-bottom: 10px;
@@ -200,6 +204,11 @@ div.info-block.info-inline.shorthelp {
 }
 
 #dataset-edit button.outsidebutton {
+    background:transparent;
+    border: none;
+}
+
+#resource-edit button.outsidebutton {
     background:transparent;
     border: none;
 }
