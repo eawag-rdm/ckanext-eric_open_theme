@@ -203,6 +203,11 @@ div.info-block.info-inline.shorthelp {
     font-size: 20px;
 }
 
+#resource-edit .icon-info-sign:before{
+    content: "\f05a";
+    font-size: 20px;
+}
+
 #dataset-edit button.outsidebutton {
     background:transparent;
     border: none;
