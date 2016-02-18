@@ -284,7 +284,7 @@ msgstr ""
 #: ckan/templates/tag/index.html:3 ckan/templates/tag/index.html:6
 #: ckan/templates/tag/index.html:12
 msgid "Tags"
-msgstr ""
+msgstr "Keywords"
 
 #: ckan/controllers/group.py:313 ckan/controllers/home.py:70
 #: ckan/controllers/package.py:242 ckan/lib/helpers.py:758
@@ -3800,7 +3800,7 @@ msgstr ""
 
 #: ckan/templates/revision/read.html:74
 msgid "Datasets' Tags"
-msgstr "Packages' Tags"
+msgstr "Packages' Keywords"
 
 #: ckan/templates/revision/snippets/revisions_list.html:7
 msgid "Entity"
@@ -4001,7 +4001,7 @@ msgid "Edits"
 msgstr ""
 
 #: ckan/templates/tag/index.html:33 ckan/templates/tag/index.html:34
-msgid "Search Tags"
+msgid "Search Keywords"
 msgstr ""
 
 #: ckan/templates/user/dashboard.html:19 ckan/templates/user/dashboard.html:37
@@ -4539,7 +4539,7 @@ msgstr ""
 
 #: ckanext/stats/templates/ckanext/stats/index.html:132
 #: ckanext/stats/templates/ckanext/stats/index.html:183
-msgid "Top Tags"
+msgid "Top Keywords"
 msgstr ""
 
 #: ckanext/stats/templates/ckanext/stats/index.html:136
