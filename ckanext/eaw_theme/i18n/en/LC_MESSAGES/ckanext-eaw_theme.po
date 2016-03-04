@@ -2864,7 +2864,7 @@ msgstr ""
 
 #: ckan/templates/home/snippets/search.html:16
 msgid "Popular tags"
-msgstr ""
+msgstr "Popular keywords"
 
 #: ckan/templates/home/snippets/stats.html:5
 msgid "{0} statistics"
