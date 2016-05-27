@@ -30,8 +30,9 @@ class Eaw_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
          new_facets = [('organization', u'Organizations'),
                        ('groups', u'Projects'),
                        ('tags', u'Keywords'),
-                       ('vocab_variables', u'Variables'),
-                       ('vocab_systems', u'Systems')]
+                       ('variables', u'Variables'),
+                       ('vocab_systems', u'Systems'),
+                       ('substances', u'Substances')]
          return new_facet_dict(facet_dict, new_facets)
 
     def group_facets(self, facet_dict, group_type, package_type):
