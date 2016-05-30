@@ -31,22 +31,22 @@ class Eaw_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                        ('groups', u'Projects'),
                        ('tags', u'Keywords'),
                        ('variables', u'Variables'),
-                       ('vocab_systems', u'Systems'),
+                       ('systems', u'Systems'),
                        ('substances', u'Substances')]
          return new_facet_dict(facet_dict, new_facets)
 
     def group_facets(self, facet_dict, group_type, package_type):
         new_facets =  [('organization', u'Organizations'),
                        ('tags', u'Keywords'),
-                       ('vocab_variables', u'Variables'),
-                       ('vocab_systems', u'Systems')]
+                       ('variables', u'Variables'),
+                       ('systems', u'Systems')]
         return new_facet_dict(facet_dict, new_facets)
 
     def organization_facets(self, facet_dict, organization_type, package_type):
-        new_facets =  [('organization', u'Organizations'),
+        new_facets =  [('groups', u'Projects'),
                        ('tags', u'Keywords'),
-                       ('vocab_variables', u'Variables'),
-                       ('vocab_systems', u'Systems')]
+                       ('variables', u'Variables'),
+                       ('systems', u'Systems')]
         return new_facet_dict(facet_dict, new_facets)
     
 
