@@ -221,3 +221,8 @@ div.info-block.info-inline.shorthelp {
 #dataset-edit .select2-container-multi.select2-container .select2-choices {
     width: 320px;
 }
+
+textarea.eaw_with_infobutton {
+  width: 90%;
+}
+
