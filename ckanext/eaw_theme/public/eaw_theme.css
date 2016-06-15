@@ -226,3 +226,13 @@ textarea.eaw_with_infobutton {
   width: 90%;
 }
 
+.additional-info th {
+  width:auto;
+}
+.additional-info td {
+  width: auto;
+}
+.additional-info table {
+  table-layout: auto;
+}
+
