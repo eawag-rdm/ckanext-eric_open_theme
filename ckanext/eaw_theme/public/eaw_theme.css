@@ -227,10 +227,10 @@ textarea.eaw_with_infobutton {
 }
 
 .additional-info th {
-  width:auto;
+  width: auto;
 }
 .additional-info td {
-  width: auto;
+  width: 500px;
 }
 .additional-info table {
   table-layout: auto;
