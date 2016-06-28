@@ -236,3 +236,8 @@ textarea.eaw_with_infobutton {
   table-layout: auto;
 }
 
+div.controls.editor div.eaw_with_infobutton {
+  display: inline-block;
+  width: 90%;
+  vertical-align: middle;
+}
