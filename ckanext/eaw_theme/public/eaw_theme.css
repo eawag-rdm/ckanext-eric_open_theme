@@ -239,12 +239,6 @@ textarea.eaw_with_infobutton {
   table-layout: auto;
 }
 
-div.controls.editor div.eaw_with_infobutton {
-  display: inline-block;
-  width: 90%;
-  vertical-align: middle;
-}
- 
 div.modal-help {
   font-size: large;
 }
@@ -256,4 +250,10 @@ div.modal-help {
 }
 .modal-help .modal-body {
   max-height: 600px;
+}
+
+div.eaw_with_infobutton {
+  width: 90%;
+  display: inline-block;
+  vertical-align: middle;
 }
