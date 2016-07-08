@@ -223,9 +223,14 @@ div.info-block.info-inline.shorthelp {
 /* } */
 
 #dataset-edit div.select2-container.select2-container-multi {
-  width: 334px;
+  width: 90%;
+  display: inline-block;
 }
 textarea.eaw_with_infobutton {
+  width: 90%;
+}
+
+input.eaw_with_infobutton {
   width: 90%;
 }
 
@@ -256,4 +261,11 @@ div.eaw_with_infobutton {
   width: 90%;
   display: inline-block;
   vertical-align: middle;
+}
+
+/* eigenj's comment here: */
+/* https://github.com/nostalgiaz/bootstrap-switch/issues/469#issuecomment-226196951 */
+
+.bootstrap-switch-container {
+  white-space: nowrap;
 }
