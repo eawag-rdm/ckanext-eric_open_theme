@@ -32,21 +32,26 @@ class Eaw_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                        ('tags', u'Keywords'),
                        ('variables', u'Variables'),
                        ('systems', u'Systems'),
-                       ('substances', u'Substances')]
+                       ('substances', u'Substances'),
+                       ('taxa', u'Taxa')]
          return new_facet_dict(facet_dict, new_facets)
 
     def group_facets(self, facet_dict, group_type, package_type):
         new_facets =  [('organization', u'Organizations'),
                        ('tags', u'Keywords'),
                        ('variables', u'Variables'),
-                       ('systems', u'Systems')]
+                       ('systems', u'Systems'),
+                       ('substances', u'Substances'),
+                       ('taxa', u'Taxa')]
         return new_facet_dict(facet_dict, new_facets)
 
     def organization_facets(self, facet_dict, organization_type, package_type):
         new_facets =  [('groups', u'Projects'),
                        ('tags', u'Keywords'),
                        ('variables', u'Variables'),
-                       ('systems', u'Systems')]
+                       ('systems', u'Systems'),
+                       ('substances', u'Substances'),
+                       ('taxa', u'Taxa')]
         return new_facet_dict(facet_dict, new_facets)
     
 
