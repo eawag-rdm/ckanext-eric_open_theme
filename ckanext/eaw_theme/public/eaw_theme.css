@@ -145,6 +145,8 @@ div.time-search {
 
 .dataset-heading .badge {
     float:right;
+    margin-left: 2ex;
+    margin-bottom: 1ex;
 }
 
 .badge > a, .label > a {
