@@ -232,8 +232,16 @@ textarea.eaw_with_infobutton {
   width: 90%;
 }
 
-input.eaw_with_infobutton {
-  width: 90%;
+@media (max-width: 768px) {
+  input.eaw_with_infobutton {
+    width: 90%;
+  }
+}
+
+@media (min-width: 980px) {
+  input.eaw_with_infobutton {
+    width: 87.5%;
+  }
 }
 
 .additional-info th {
