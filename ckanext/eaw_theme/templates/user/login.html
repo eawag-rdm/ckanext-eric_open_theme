@@ -1,6 +1,15 @@
-{# Remove register button since we authorize against LDAP #}
+{# Remove register button and passowr forgotten since we authorize against LDAP #}
 {% ckan_extends %}
 
-{% block help_register %}
+{% block secondary_content %}
+  <section class="module module-narrow module-shallow">
+    <h2 class="module-heading">{{ _('Use your Eawag credentials to log in.') }}</h2>
+    <div class="module-content">
+      <p>
+	{% trans %}The same username/password combination that you
+	  use for your Windows desktop computer and for webmail access{%
+	  endtrans %}
+      </p>
+    </div>
+  </section>
 {% endblock %}
-
