@@ -1,6 +1,12 @@
 {% ckan_extends %}
 
+{# The "Beta" banderole #}
 {% block header_wrapper %}
-<img style="position:absolute;top:0;left:0;height:60px;" src="/beta.png" />
-{{ super() }}
+  <img style="position:absolute;top:0;left:0;height:60px;" src="/beta.png" />
+  {{ super() }}
+{% endblock %}
+
+{# Remove registration link (LDAP-Auth) #}
+{% block header_account_notlogged %}
+  <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
 {% endblock %}
