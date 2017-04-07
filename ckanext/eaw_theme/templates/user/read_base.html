@@ -1,0 +1,16 @@
+{% ckan_extends %}
+
+{# Remove gravatar image #}
+{% block user_image %}
+{% endblock %}
+
+{# Remove placeholder for about - test #}
+{% block user_about %}
+  {% if c.about_formatted %}
+    {{ c.about_formatted }}
+  {% else %}
+    <p class="empty">
+
+    </p>
+  {% endif %}
+{% endblock %}
