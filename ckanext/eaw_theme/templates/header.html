@@ -10,3 +10,7 @@
 {% block header_account_notlogged %}
   <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
 {% endblock %}
+
+{# Remove setting link in masthead #}
+{% block header_account_settings_link %}
+{% endblock %}
