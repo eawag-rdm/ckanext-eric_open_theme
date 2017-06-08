@@ -36,8 +36,10 @@ a.logo img {
 
 @media (min-width: 768px) {
     .hero {
-	background: url("../../../base/images/cern_server-room5.jpg");
-    }
+      /* background: url("../../../base/images/airbubbles.jpg"); */
+      background: url("/base/images/ea-rdp_white.png");
+/*  */
+}
 }
 
 div#content.container {
