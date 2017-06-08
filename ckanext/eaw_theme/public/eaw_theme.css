@@ -36,10 +36,8 @@ a.logo img {
 
 @media (min-width: 768px) {
     .hero {
-      /* background: url("../../../base/images/airbubbles.jpg"); */
-      background: url("/base/images/ea-rdp_white.png");
-/*  */
-}
+      background: url("/base/images/airbubbles.jpg");
+    }
 }
 
 div#content.container {
