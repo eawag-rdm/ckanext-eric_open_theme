@@ -34,10 +34,22 @@ a.logo img {
     max-width: 262px;
 }
 
+div.homepage.layout-3 {
+  background: url("/base/images/airbubbles.jpg");
+  background-size: 100%;
+}
+
 @media (min-width: 768px) {
-    .hero {
-      background: url("/base/images/airbubbles.jpg");
-    }
+  [role=main],
+  .main {
+    padding-top: 10px;
+    background: url("../../../base/images/bg.png");
+  }
+}
+
+.toolbar ol.breadcrumb {
+  background: rgb(245, 245, 245);
+  padding: 5px;
 }
 
 div#content.container {
