@@ -13,6 +13,7 @@ def new_facet_dict(facet_dict, new_facets):
         facet_dict[k] = v
     return facet_dict
 
+
 class Eaw_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IConfigurer)
@@ -53,5 +54,7 @@ class Eaw_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                        ('substances', u'Substances'),
                        ('taxa', u'Taxa')]
         return new_facet_dict(facet_dict, new_facets)
-    
+
+
+ 
 
