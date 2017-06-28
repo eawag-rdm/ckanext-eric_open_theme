@@ -88,6 +88,10 @@ select.filterselect {
     background-color: #eaeaea;
 }
 
+.search-form {
+  clear: both;
+}
+
 .search-form input.wide-search {
     width: 355px;
 }
