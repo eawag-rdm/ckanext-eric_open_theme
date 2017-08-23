@@ -283,12 +283,6 @@ div.modal-help {
   max-height: 600px;
 }
 
-div.eaw_with_infobutton {
-  width: 90%;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 /* eigenj's comment here: */
 /* https://github.com/nostalgiaz/bootstrap-switch/issues/469#issuecomment-226196951 */
 
