@@ -135,9 +135,6 @@ div.time-search {
     table-layout:fixed;
 }
 
-.modal-body span {
-    font-weight: bold;
-}
 
 .modal-body table th.col1 {
     width: 23ex;
