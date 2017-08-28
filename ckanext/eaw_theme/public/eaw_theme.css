@@ -160,6 +160,7 @@ div.time-search {
     float:right;
     margin-left: 2ex;
     margin-bottom: 1ex;
+    background-color: #708FAF;
 }
 
 .badge > a, .label > a {
@@ -167,7 +168,8 @@ div.time-search {
 }
 
 a.package_desc {
-    color: #000000;
+  color: #000000;
+  text-decoration: none;
 }
 
 .search-form .search-input.search-giant button {
@@ -285,4 +287,16 @@ div.modal-help {
 
 .bootstrap-switch-container {
   white-space: nowrap;
+}
+
+div.well.well-small {
+  background-color: #F7F5F3;
+}
+
+div.well.well-small:hover {
+  background-color: #E3DCD6;
+}
+
+.dataset-heading a {
+  text-decoration: none;
 }
