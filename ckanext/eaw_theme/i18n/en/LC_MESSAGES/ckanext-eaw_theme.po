@@ -3133,7 +3133,7 @@ msgid ""
 "with a description and other information, at a fixed URL. Datasets are what "
 "users see when searching for data. "
 msgstr ""
-msgstr " A CKAN Package is a collection of data resources (such as files), together "
+" A CKAN Package is a collection of data resources (such as files), together "
 "with a description and other information, at a fixed URL. Packages are what "
 "users see when searching for data. "
 
