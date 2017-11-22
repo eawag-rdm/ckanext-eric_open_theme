@@ -215,12 +215,12 @@ div.info-block.info-inline.shorthelp {
     margin-top: -8px;
 }
 
-#dataset-edit .icon-info-sign:before{
+#dataset-edit .fa-info-circle:before{
     content: "\f05a";
     font-size: 20px;
 }
 
-#resource-edit .icon-info-sign:before{
+#resource-edit .fa-info-circle:before{
     content: "\f05a";
     font-size: 20px;
 }
