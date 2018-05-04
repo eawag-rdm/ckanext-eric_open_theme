@@ -6,3 +6,7 @@
   {{ super() }}
   <link rel="stylesheet" href="/eaw_theme.css" />
 {% endblock %}
+
+{% block scripts -%}  {{ super() }}
+  {% resource 'eaw_theme/clickwholedivs.js' %}
+{%- endblock %}
