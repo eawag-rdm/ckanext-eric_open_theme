@@ -7,5 +7,10 @@
   {% set dataset_extent = c.pkg_dict['spatial'] %}
   {% if dataset_extent and dataset_extent != "{}" %}
     {% snippet "spatial/snippets/dataset_map.html", extent=dataset_extent %}
-  {% endif %}
+{% endif %}
+{% endblock %}
+
+{% block primary_content_inner %}
+  {{ super() }}
+  {% resource 'eaw_theme/clickwholedivs.js' %}
 {% endblock %}

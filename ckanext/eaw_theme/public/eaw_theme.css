@@ -300,3 +300,7 @@ div.well.well-small:hover {
 .dataset-heading a {
   text-decoration: none;
 }
+
+li.resource-item:hover {
+  background-color: #CBE8EC;
+}
