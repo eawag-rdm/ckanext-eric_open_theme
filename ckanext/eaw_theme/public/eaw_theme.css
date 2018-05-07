@@ -173,7 +173,7 @@ a.package_desc {
 }
 
 .search-form .search-input.search-giant button {
-    margin-top: -5px;
+    margin-top: -14px;
 }
 
 form.module-content.search-form .search-input.search-giant button {
@@ -307,7 +307,7 @@ li.resource-item:hover {
 
 /* spatial_query.css */
 .module-narrow #dataset-map-container {
-  height: 600px;
+  height: 400px;
 }
 
 /* vertical line btween secondary & primary content */
@@ -329,7 +329,12 @@ li.resource-item:hover {
 }
 
 .module .read-more {
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-weight: normal;
   font-style: italic;
-  color: #000000;
+  color: #005976;
+}
+
+section#dataset-map {
+  margin: 0;
 }
