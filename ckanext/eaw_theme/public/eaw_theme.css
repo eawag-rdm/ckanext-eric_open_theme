@@ -56,11 +56,6 @@ div#content.container {
     min-width: 535px;
 }
 
-.page_primary_action > a.btn-primary{
-    float: right;
-    margin-bottom: 10px;
-}
-
 .select2-container-multi .select2-choices {
     min-height: 53px;
 }
