@@ -304,3 +304,32 @@ div.well.well-small:hover {
 li.resource-item:hover {
   background-color: #CBE8EC;
 }
+
+/* spatial_query.css */
+.module-narrow #dataset-map-container {
+  height: 600px;
+}
+
+/* vertical line btween secondary & primary content */
+@media (min-width: 768px) {
+  .wrapper {
+    background-image: None;
+  }
+}
+
+/* horizontal lines betwen facets */
+.nav-simple > li, .nav-aside > li {
+  border-bottom: none;
+}
+
+/* remove background & border facet headings */
+.module-heading {
+  background-color: white;
+  border: 0;
+}
+
+.module .read-more {
+  font-weight: bold;
+  font-style: italic;
+  color: #000000;
+}
