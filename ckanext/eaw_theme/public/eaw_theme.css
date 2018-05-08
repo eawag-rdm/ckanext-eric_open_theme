@@ -333,3 +333,8 @@ li.resource-item:hover {
 section#dataset-map {
   margin: 0;
 }
+
+label.checkbox.btn.btn-success.fa.fa-plus {
+  line-height: inherit;
+}
+
