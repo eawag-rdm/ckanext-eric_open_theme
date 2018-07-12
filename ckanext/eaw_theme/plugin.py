@@ -24,7 +24,19 @@ def eaw_theme_get_spatial_query_default_extent():
         extent =  [[-40.0, -20.], [60.0, 20.]]
     return extent
 
-
+def eaw_theme_get_default_dataset_type(organization_id):
+    '''Returns the [default] dataset type of an organization'''
+    default_pkg_type = tk.get_action('organization_show')(
+        data_dict={
+            'id': organization_id,
+            'include_extras': True,
+            'include_users': False,
+            'include_groups': False,
+            'include_tags': False,
+            'include_followers': False
+            }).get('default_package_type', 'dataset')
+    return default_pkg_type
+    
 class Eaw_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IConfigurer)
@@ -74,4 +86,6 @@ class Eaw_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         # extension they belong to, to avoid clashing with functions from
         # other extensions.
         return {'eaw_theme_get_spatial_query_default_extent':
-                eaw_theme_get_spatial_query_default_extent}
+                eaw_theme_get_spatial_query_default_extent,
+                'eaw_theme_get_default_dataset_type':
+                eaw_theme_get_default_dataset_type}
