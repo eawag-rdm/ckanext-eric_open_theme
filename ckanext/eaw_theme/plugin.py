@@ -2,8 +2,11 @@ from collections import OrderedDict
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as tk
 from ckan.lib.plugins import DefaultTranslation
+import logging
 from json import loads
+import re
 
+logger = logging.getLogger(__name__)
 
 # This is a workaround issue  #2713
 # https://github.com/ckan/ckan/issues/2713
@@ -36,6 +39,74 @@ def eaw_theme_get_default_dataset_type(organization_id):
             'include_followers': False
             }).get('default_package_type', 'dataset')
     return default_pkg_type
+
+def eaw_theme_patch_activity_actor(actor):
+    '''Patches an activity_item actor string to replace the
+    image source at gravatar.com with the Eawag picture.
+
+    '''
+    newusername = re.search(
+        r'<a\s*href="/user/(.*?)"\s*>', actor, flags=re.S)
+    try:
+        newusername = newusername.group(1)
+    except AttributeError:
+        newusername = 'unknown user'
+        logger.warn("faild to extract username")
+    eawuserpic = eaw_theme_geteawuser(newusername)
+    try:
+        eawuserpic = eawuserpic.get('pic_url', '')
+    except AttributeError:
+        logger.warn("Could not find Eawag user picture")
+        eawuserpic = ''
+    newactor = re.sub(
+        '<\s*img\s*.*?/\s*>',
+        '<img src="{}" width="30px height="30px"/>'.format(eawuserpic),
+        actor, flags=re.S).unescape()
+    return newactor
+
+# A copy & paste from ckanext-eaw_schema (eaw_schema_geteawuser)
+# for better modularity
+def eaw_theme_geteawuser(username):
+    """Returns info about Eawag user:
+       + link to picture
+       + link to homepage of user
+       + ...
+
+    """
+
+    pic_url_prefix = ("http://www.eawag.ch/fileadmin/user_upload/"
+                      "tx_userprofiles/profileImages/")
+    def geteawhp(fullname):
+        "Returns the Eawag homepage of somebody"
+        hp_url_prefix = ('http://www.eawag.ch/en/aboutus/portrait/'
+                         'organisation/staff/profile/')
+        # If we can't derive the Eawag personal page, go to search page.
+        hp_url_fallback_template = ('http://www.eawag.ch/en/suche/'
+                                    '?q=__NAME__&tx_solr[filter][0]'
+                                    '=filtertype%3A3')
+        try:
+            last, first = fullname.split(',')
+        except (ValueError, AttributeError):
+            if not isinstance(fullname, basestring):
+                fullname = 'not a string'
+            logger.warn('User Fullname "{}" does not '
+                        'have standard format ("lastname, firstname")'
+                        .format(fullname))
+            return hp_url_fallback_template.replace('__NAME__', fullname)
+            
+        normname = '-'.join([s.strip().lower() for s in [first, last]])
+        return hp_url_prefix + normname
+
+    try:
+        userdict = tk.get_action('user_show')(data_dict={'id': username})
+    except:
+       return None
+    eawuser = {'fullname': userdict.get('fullname'), 'email': userdict.get('email'),
+               'no_of_packages': userdict.get('number_created_packages'),
+               'homepage': geteawhp(userdict.get('fullname')),
+               'pic_url': '{}{}.jpg'.format(pic_url_prefix, username)}
+    return eawuser
+
     
 class Eaw_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
@@ -88,4 +159,8 @@ class Eaw_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         return {'eaw_theme_get_spatial_query_default_extent':
                 eaw_theme_get_spatial_query_default_extent,
                 'eaw_theme_get_default_dataset_type':
-                eaw_theme_get_default_dataset_type}
+                eaw_theme_get_default_dataset_type,
+                'eaw_theme_patch_activity_actor':
+                eaw_theme_patch_activity_actor,
+                'eaw_theme_geteawuser':
+                eaw_theme_geteawuser}

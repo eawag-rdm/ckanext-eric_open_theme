@@ -5,16 +5,11 @@
   {% endif %}
   <i class="fa icon fa-{{ activity.icon }}"></i>
   <p>
-    {{ activity }}
-    {%- set username = c.user -%}
-    {%- set fullname = c.userobj.fullname -%} 
-    {%- set userhp = h.url_for(controller='user', action='read', id=username) -%}
-    {%- set eawuser = h.eaw_schema_geteawuser(username) -%} 
-    {% set linkeduser = h.literal('<img src="{}" width="30px" height="30px" /> <a href="{}">{}</a>'.format(eawuser.pic_url, userhp, fullname)) %}
-    {% set  _dummy = activity.data.update({'actor': linkeduser}) %}
-    {{ h.literal(activity.msg.format(**activity.data)) }}
+    {% set newactor =  h.eaw_theme_patch_activity_actor(activity.data['actor']) |safe %}
+    {% set  _dummy = activity.data.update({'actor': newactor}) %} 
+    {{ h.literal(activity.msg.format(**activity.data)) }}   
     <span class="date" title="{{ h.render_datetime(activity.timestamp, with_hours=True) }}">{{ h.time_ago_from_timestamp(activity.timestamp) }}</span>
   </p>
 </li>
 
-{# {{ dict(c) }} #}
+
