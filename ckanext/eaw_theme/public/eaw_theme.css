@@ -31,7 +31,9 @@
 }
 
 a.logo img {
-    max-width: 262px;
+  max-width: 350px;
+  margin-top: 0px;
+  border-radius: 10px;
 }
 
 div.homepage.layout-3 {
@@ -338,3 +340,21 @@ label.checkbox.btn.btn-success.fa.fa-plus {
   line-height: inherit;
 }
 
+.homepage .module-search {
+    padding: 0;
+    margin: 250px 0 0 5px;
+    color: #ffffff;
+    background: 0;
+    border: 0;
+    box-shadow: 0px 0px 20px 5px white;
+    border-radius: 10px;
+    
+
+}
+.homepage .module-search .tags {
+    padding: 5px 10px 10px 10px;
+    background-color: #005d7a;;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+}
