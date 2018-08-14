@@ -30,9 +30,13 @@
     font-size: 18px;
 }
 
+.account-masthead {
+  background: #005d7a url("/base/images/bg.png");
+}
+
 a.logo img {
   max-width: 350px;
-  margin-top: 0px;
+  margin-top: -17px;
   border-radius: 10px;
 }
 
@@ -347,14 +351,21 @@ label.checkbox.btn.btn-success.fa.fa-plus {
     background: 0;
     border: 0;
     box-shadow: 0px 0px 20px 5px white;
-    border-radius: 10px;
-    
-
+    -webkit-border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
 }
+
 .homepage .module-search .tags {
     padding: 5px 10px 10px 10px;
     background-color: #005d7a;;
-    -webkit-border-radius: 0 0 3px 3px;
-    -moz-border-radius: 0 0 3px 3px;
-    border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 15px 15px;
+    -moz-border-radius: 0 0 15px 15px;
+    border-radius: 0 0 15px 15px;
+}
+
+.homepage .module-search .module-content {
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 0 0;
 }
