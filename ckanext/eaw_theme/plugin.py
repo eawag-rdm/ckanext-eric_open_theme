@@ -2,6 +2,7 @@ from collections import OrderedDict
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as tk
 from ckan.lib.plugins import DefaultTranslation
+from ckan.lib.helpers import linked_user
 import logging
 from json import loads
 import re
@@ -64,6 +65,20 @@ def eaw_theme_patch_activity_actor(actor):
         actor, flags=re.S).unescape()
     return newactor
 
+def eaw_theme_patch_linked_user(user, maxlength=0, avatar=20):
+    res = linked_user(user, maxlength=0, avatar=20)
+    eawuserpic = eaw_theme_geteawuser(user)
+    try:
+        eawuserpic = eawuserpic.get('pic_url', '')
+    except AttributeError:
+        logger.warn("Could not find Eawag user picture")
+        eawuserpic = ''
+    else:
+        res = re.sub('src="[^"]*?"',
+                     'src={}'.format(eawuserpic),
+                     res, flags=re.S)
+    return res
+
 # A copy & paste from ckanext-eaw_schema (eaw_schema_geteawuser)
 # for better modularity
 def eaw_theme_geteawuser(username):
@@ -113,6 +128,8 @@ class Eaw_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IFacets)
     plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IPackageController, inherit=True)
+    
 
     # IConfigurer
     def update_config(self, config_):
@@ -163,4 +180,15 @@ class Eaw_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 'eaw_theme_patch_activity_actor':
                 eaw_theme_patch_activity_actor,
                 'eaw_theme_geteawuser':
-                eaw_theme_geteawuser}
+                eaw_theme_geteawuser,
+                'eaw_theme_patch_linked_user':
+                eaw_theme_patch_linked_user}
+
+    # IPackageController
+    def before_search(self, search_params):
+        search_params.update({
+            'sort': search_params.get('sort', 'mydefaultsortparam asc')
+        })
+        return search_params
+
+        
