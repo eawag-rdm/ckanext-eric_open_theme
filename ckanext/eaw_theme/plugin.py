@@ -67,7 +67,9 @@ def eaw_theme_patch_activity_actor(actor):
 
 def eaw_theme_patch_linked_user(user, maxlength=0, avatar=20):
     res = linked_user(user, maxlength=0, avatar=20)
-    eawuserpic = eaw_theme_geteawuser(user)
+    # Get the username in case <user> is the id
+    username = tk.get_action('user_show')(data_dict={'id': user})['name']
+    eawuserpic = eaw_theme_geteawuser(username)
     try:
         eawuserpic = eawuserpic.get('pic_url', '')
     except AttributeError:
