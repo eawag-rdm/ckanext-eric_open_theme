@@ -17,54 +17,6 @@
       {% snippet "home/layout{0}.html".format(homepage_style) %}
     {% endblock %}
   </div>
-  
-  <div class="modal fade" id="transimodal">
-  <div class="modal-header">
-    <a class="close" data-dismiss="modal">×</a>
-    <h2>ATTENTION PLEASE! </h2>
-  </div>
-
-  <div class="modal-body" style="font-size: 130%;border:1px;border-style:solid;padding:5px 30px 5px 30px;background-color:yellow; margin:0px;max-height:90%">
-    <h3>Transition</h3>
-
-    <p>We are migrating all data from the old server (<a href="https://eaw-ckan-dev1.eawag.wroot.emp-eaw.ch">eaw-ckan-dev1</a>) to this one. We do that <b>by department</b>.</p>
-    <p><b>If your department is listed below</b>, please use <b>this system</b> for any new uploads and changes to existing packages.</p>
-    <p><b>If your department is not listed below</b>, please use <a href="https://eaw-ckan-dev1.eawag.wroot.emp-eaw.ch">the old system.</a></p>
-    <p><b>Departments that are already migrated to this system:</b></p>
-    <div style="float:left;">
-      <ul style="font-size:100%;">
-	<li><b>SIAM</b></li>
-	<li><b>ECO</b></li>
-	<li><b>SWW</b></li>
-	<li><b>ECOTOX</b></li>
-	<li><b>UCHEM</b></li>
-	<li><b>UMIK</b></li>
-      </ul>
-    </div>
-    <div style="margin-left:150px;">
-      <ul style="font-size:100%;">
-	<li><b>ESS</b></li>
-	<li><b>UTOX</b></li>
-	<li><b>SURF</b></li>
-	<li><b>W+T</b></li>
-	<li><b>ENG</b></li>
-	<li><b>FISHEC</b></li>
-      </ul>
-    </div>
-    <div style="clear:both;font-size:90%;margin-top:20px;">For questions regarding the transition,<br />please get in touch with <a href="mailto:rdm@eawag.ch">Harald &lt;rdm@eawag.ch&gt;</a></div>
-  </div>
-
-  <div class="modal-footer">
-    <a href="#" class="btn btn-primary" data-dismiss="modal" >OK, I got that!</a>
-  </div>
-</div>
-  <script>
-    window.onload = function(){
-    
-      $('#transimodal').modal();
-    };
-  </script>
-
 {% endblock %}
 
   
